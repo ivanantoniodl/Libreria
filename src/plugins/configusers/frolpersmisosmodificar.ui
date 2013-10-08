@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FRolPersmisosModificar</class>
+ <widget class="QDialog" name="FRolPersmisosModificar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>230</width>
+    <height>139</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Permisos</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Permisos</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QCheckBox" name="chbxR">
+        <property name="text">
+         <string>Permiso de lectura</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QCheckBox" name="chbxW">
+        <property name="text">
+         <string>Permiso de escritura</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnAceptar">
+       <property name="text">
+        <string>Aceptar</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../../app/app.qrc">
+         <normaloff>:/pics/dialog-ok.png</normaloff>:/pics/dialog-ok.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnCancelar">
+       <property name="text">
+        <string>Cancelar</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../../app/app.qrc">
+         <normaloff>:/pics/dialog-close.png</normaloff>:/pics/dialog-close.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../app/app.qrc"/>
+  <include location="../../app/app.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btnCancelar</sender>
+   <signal>clicked()</signal>
+   <receiver>FRolPersmisosModificar</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>165</x>
+     <y>114</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>182</x>
+     <y>135</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/">
+        <file>categorias/bebidas.png</file>
+        <file>categorias/bebidasnaturales.png</file>
+        <file>categorias/Cafe.png</file>
+        <file>categorias/carnes.png</file>
+        <file>categorias/chocolate.png</file>
+        <file>categorias/Chocolatebebida.png</file>
+        <file>categorias/Croissant.png</file>
+        <file>categorias/dona.png</file>
+        <file>categorias/dulces.png</file>
+        <file>categorias/Frutas.png</file>
+        <file>categorias/hamburguesa.png</file>
+        <file>categorias/helado.png</file>
+        <file>categorias/helados.png</file>
+        <file>categorias/hotdog.png</file>
+        <file>categorias/hotdpg.png</file>
+        <file>categorias/huevos.png</file>
+        <file>categorias/Ingredientes.png</file>
+        <file>categorias/papasfritas.png</file>
+        <file>categorias/Pasta.png</file>
+        <file>categorias/Pastel.png</file>
+        <file>categorias/pastelitos.png</file>
+        <file>categorias/pizza.png</file>
+        <file>categorias/quesos.png</file>
+        <file>categorias/superhamburguesa.png</file>
+        <file>categorias/te.png</file>
+        <file>categorias/verduras.png</file>
+    </qresource>
+</RCC>

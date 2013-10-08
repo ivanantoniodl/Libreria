@@ -1,0 +1,12 @@
+ #ifndef CONFIGUSERS_GLOBAL_H
+#define CONFIGUSERS_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(CONFIGUSERS_LIBRARY)
+#  define CONFIGUSERSSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define CONFIGUSERSSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // CONFIGUSERS_GLOBAL_H

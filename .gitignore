@@ -1,0 +1,13 @@
+*~
+*.pro.user
+build/
+.directory
+*.o
+Makefile
+moc_*
+ui_*
+dbconfig
+*.mwb.bak
+*.autosave
+src/plugins/pruebas/
+src/plugins/pruebas2/

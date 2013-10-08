@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fConfConexion</class>
+ <widget class="QDialog" name="fConfConexion">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>321</width>
+    <height>337</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Configurar conexión</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QLabel" name="label_4">
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Configurar Conexión</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>&amp;Servidor</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="buddy">
+        <cstring>ledServidor</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="ledServidor">
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>&amp;Puerto</string>
+       </property>
+       <property name="buddy">
+        <cstring>ledPuerto</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="ledPuerto"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>&amp;Base de Datos</string>
+       </property>
+       <property name="buddy">
+        <cstring>ledBaseDatos</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="ledBaseDatos"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="cbxTipoServidor">
+       <item>
+        <property name="text">
+         <string>MySQL</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>MySQL Proxy</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>&amp;Tipo de servidor</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="buddy">
+        <cstring>cbxTipoServidor</cstring>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Avanzado</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QCheckBox" name="cbxSSL">
+        <property name="text">
+         <string>Co&amp;nexión SSL</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="cbxCompresion">
+        <property name="text">
+         <string>&amp;Habilitar Compresión</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="grpBoxProxy">
+     <property name="title">
+      <string>MySQL-Proxy</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Script de inicio Mysql-Proxy</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLineEdit" name="ledProxyPath"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnExaminar">
+          <property name="text">
+           <string>&amp;Examinar</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnAceptar">
+       <property name="text">
+        <string>&amp;Aceptar</string>
+       </property>
+       <property name="icon">
+        <iconset resource="app.qrc">
+         <normaloff>:/pics/dialog-ok-apply.png</normaloff>:/pics/dialog-ok-apply.png</iconset>
+       </property>
+       <property name="autoDefault">
+        <bool>true</bool>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnCancelar">
+       <property name="text">
+        <string>&amp;Cancelar</string>
+       </property>
+       <property name="icon">
+        <iconset resource="app.qrc">
+         <normaloff>:/pics/dialog-close.png</normaloff>:/pics/dialog-close.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="app.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btnCancelar</sender>
+   <signal>clicked()</signal>
+   <receiver>fConfConexion</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>264</x>
+     <y>230</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>42</x>
+     <y>218</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnAceptar</sender>
+   <signal>clicked()</signal>
+   <receiver>fConfConexion</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>211</x>
+     <y>247</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>88</x>
+     <y>225</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

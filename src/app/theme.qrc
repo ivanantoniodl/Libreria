@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>themes/default/theme.css</file>
+        <file>themes/default/pics/arrow-left.png</file>
+        <file>themes/default/pics/ButtonBackground.png</file>
+        <file>themes/default/pics/ButtonBackgroundHover.png</file>
+        <file>themes/default/pics/fondo.png</file>
+        <file>themes/default/pics/fondo2.png</file>
+    </qresource>
+</RCC>

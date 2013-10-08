@@ -1,0 +1,366 @@
+---
+RolPermiso:
+  columns:
+    idRolPermiso:
+      type: integer
+      primary: true
+      notnull: true
+      autoincrement: true
+      position: 1
+    Permiso_idPermiso:
+      type: integer
+      notnull: true
+      position: 2
+    Rol_idRol:
+      type: integer
+      notnull: true
+      position: 3
+    Permiso:
+      type: tinyint
+      unsigned: true
+      notnull: true
+      position: 4
+  relations:
+    RolIdRol:
+      class: Rol
+      local: Rol_idRol
+      foreign: idRol
+      foreignAlias: RolPermiso
+      onDelete: cascade
+      onUpdate: cascade
+    PermisoIdPermiso:
+      class: Permiso
+      local: Permiso_idPermiso
+      foreign: idPermiso
+      foreignAlias: RolPermiso
+  indexes:
+    Table_42_FKIndex1:
+      fields: [Rol_idRol]
+    Table_42_FKIndex2:
+      fields: [Permiso_idPermiso]
+
+Permiso:
+  columns:
+    idPermiso:
+      type: integer
+      primary: true
+      notnull: true
+      autoincrement: true
+      position: 1
+    GrupoPermiso_idGrupoPermiso:
+      type: integer
+      notnull: true
+      position: 2
+    Formulario:
+      type: string(100)
+      notnull: true
+      position: 3
+    Etiqueta:
+      type: string(50)
+      notnull: true
+      position: 4
+  relations:
+    GrupoPermisoIdGrupoPermiso:
+      class: GrupoPermiso
+      local: GrupoPermiso_idGrupoPermiso
+      foreign: idGrupoPermiso
+      foreignAlias: Permiso
+      onDelete: cascade
+      onUpdate: cascade
+  indexes:
+    Permiso_FKIndex1:
+      fields: [GrupoPermiso_idGrupoPermiso]
+
+GrupoPermiso:
+  columns:
+    idGrupoPermiso:
+      type: integer
+      primary: true
+      notnull: true
+      autoincrement: true
+      position: 1
+    Nombre:
+      type: string(50)
+      notnull: true
+      position: 2
+
+Usuario:
+  columns:
+    idUsuario:
+      type: integer
+      primary: true
+      notnull: true
+      autoincrement: true
+      position: 1
+    Empresa_idEmpresa:
+      type: integer
+      notnull: true
+      position: 2
+    Rol_idRol:
+      type: integer
+      notnull: true
+      position: 3
+    UsuarioCargo_idUsuarioCargo:
+      type: tinyint
+      unsigned: true
+      notnull: true
+      position: 4
+    Nombres:
+      type: string(100)
+      notnull: true
+      position: 5
+    Apellidos:
+      type: string(100)
+      notnull: true
+      position: 6
+    Usuario:
+      type: string(35)
+      unique: true
+      notnull: true
+      position: 7
+    FechaHora:
+      type: datetime
+      notnull: true
+      position: 8
+    Turno:
+      type: string(45)
+      position: 9
+  relations:
+    UsuarioCargoIdUsuarioCargo:
+      class: UsuarioCargo
+      local: UsuarioCargo_idUsuarioCargo
+      foreign: idUsuarioCargo
+      foreignAlias: Usuario
+    RolIdRol:
+      class: Rol
+      local: Rol_idRol
+      foreign: idRol
+      foreignAlias: Usuario
+    EmpresaIdEmpresa:
+      class: Empresa
+      local: Empresa_idEmpresa
+      foreign: idEmpresa
+      foreignAlias: Usuario
+  indexes:
+    Usuarios_FKIndex1:
+      fields: [UsuarioCargo_idUsuarioCargo]
+    Usuarios_FKIndex2:
+      fields: [Rol_idRol]
+    Usuario_FKIndex3:
+      fields: [Empresa_idEmpresa]
+
+Rol:
+  columns:
+    idRol:
+      type: integer
+      primary: true
+      notnull: true
+      autoincrement: true
+      position: 1
+    Rol:
+      type: string(50)
+      notnull: true
+      position: 2
+
+UsuarioCargo:
+  columns:
+    idUsuarioCargo:
+      type: tinyint
+      primary: true
+      unsigned: true
+      notnull: true
+      autoincrement: true
+      position: 1
+    Cargo:
+      type: string(15)
+      notnull: true
+      position: 2
+
+Lugar:
+  columns:
+    idLugar:
+      type: tinyint
+      primary: true
+      unsigned: true
+      notnull: true
+      autoincrement: true
+      position: 1
+    Empresa_idEmpresa:
+      type: integer
+      notnull: true
+      position: 2
+    LugarTipo_idLugarTipo:
+      type: tinyint
+      unsigned: true
+      notnull: true
+      position: 3
+    Nombre:
+      type: string(60)
+      default: null
+      position: 4
+    Direccion:
+      type: string(255)
+      default: null
+      position: 5
+    Telefono:
+      type: string(9)
+      default: null
+      position: 6
+    NumPlaca:
+      type: string(8)
+      default: null
+      position: 7
+  relations:
+    LugarTipoIdLugarTipo:
+      class: LugarTipo
+      local: LugarTipo_idLugarTipo
+      foreign: idLugarTipo
+      foreignAlias: Lugar
+    EmpresaIdEmpresa:
+      class: Empresa
+      local: Empresa_idEmpresa
+      foreign: idEmpresa
+      foreignAlias: Lugar
+  indexes:
+    Lugares_FKIndex1:
+      fields: [LugarTipo_idLugarTipo]
+    Lugar_FKIndex2:
+      fields: [Empresa_idEmpresa]
+
+Empresa:
+  columns:
+    idEmpresa:
+      type: integer
+      primary: true
+      notnull: true
+      autoincrement: true
+      position: 1
+    Nombre:
+      type: string(45)
+      default: null
+      position: 2
+
+LugarTipo:
+  columns:
+    idLugarTipo:
+      type: tinyint
+      primary: true
+      unsigned: true
+      notnull: true
+      autoincrement: true
+      position: 1
+    Tipo:
+      type: string(25)
+      notnull: true
+      position: 2
+
+Libro:
+  columns:
+    id:
+      type: integer
+      primary: true
+      notnull: true
+      autoincrement: true
+      position: 1
+    Nombre:
+      type: string(45)
+      position: 2
+    AnioImp:
+      type: string(5)
+      position: 3
+
+Editorial:
+  columns:
+    id:
+      type: integer
+      primary: true
+      notnull: true
+      autoincrement: true
+      position: 1
+    Nombre:
+      type: string(45)
+      position: 2
+    Direccion:
+      type: string(45)
+      position: 3
+
+EditorialLibro:
+  columns:
+    id:
+      type: integer
+      primary: true
+      notnull: true
+      autoincrement: true
+      position: 1
+    Editorial_id:
+      type: integer
+      notnull: true
+      position: 2
+    Libro_id:
+      type: integer
+      notnull: true
+      position: 3
+  relations:
+    Editorial:
+      class: Editorial
+      local: Editorial_id
+      foreign: id
+      foreignAlias: EditorialLibro
+    Libro:
+      class: Libro
+      local: Libro_id
+      foreign: id
+      foreignAlias: EditorialLibro
+  indexes:
+    fk_Editorial_has_Libro_Libro1_idx:
+      fields: [Libro_id]
+    fk_Editorial_has_Libro_Editorial1_idx:
+      fields: [Editorial_id]
+
+Autor:
+  columns:
+    id:
+      type: integer
+      primary: true
+      notnull: true
+      position: 1
+    Nombre:
+      type: string(45)
+      position: 2
+    Direccion:
+      type: string(45)
+      position: 3
+
+LibroAutor:
+  columns:
+    id:
+      type: integer
+      primary: true
+      notnull: true
+      autoincrement: true
+      position: 1
+    Libro_id:
+      type: integer
+      notnull: true
+      position: 2
+    Autor_id:
+      type: integer
+      notnull: true
+      position: 3
+  relations:
+    Libro:
+      class: Libro
+      local: Libro_id
+      foreign: id
+      foreignAlias: LibroAutor
+    Autor:
+      class: Autor
+      local: Autor_id
+      foreign: id
+      foreignAlias: LibroAutor
+  indexes:
+    fk_Libro_has_Autor_Autor1_idx:
+      fields: [Autor_id]
+    fk_Libro_has_Autor_Libro1_idx:
+      fields: [Libro_id]
+

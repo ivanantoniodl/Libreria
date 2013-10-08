@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FConexion</class>
+ <widget class="QDialog" name="FConexion">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>427</width>
+    <height>218</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SIE</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+#buttonsFrame {
+border: none;
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+stop: 0 #214271, stop: 0.08 #214271,
+stop: 0.39999 #214271, stop: 0.4 #214271,
+stop: 0.9 #214271, stop: 1 #214271);
+}
+
+#buttonsFrame QPushButton {
+color: #333;
+border: 2px solid #555;
+border-radius: 11px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #888);
+min-width: 80px;
+}
+#buttonsFrame QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.35, stop: 0 #fff, stop: 1 #bbb);
+}
+#buttonsFrame QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.35, stop: 0 #fff, stop: 1 #ddd);
+}
+
+
+#inputFrame {
+border: none;
+}
+
+QLineEdit {
+padding: 1px;
+border-style: solid;
+border: 1px solid gray;
+border-radius: 8px;
+}
+
+#topFrame {
+border: none;
+}
+
+#FConexion{
+background-image: url(:/pics/fondoDialog.svg);
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QFrame" name="topFrame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="lblTitulo">
+          <property name="text">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;table border=&quot;0&quot; style=&quot;-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;&quot;&gt;
+&lt;tr&gt;
+&lt;td style=&quot;border: none;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; font-style:italic; color:#ffffff;&quot;&gt;SOLUCIONES INTEGRALES EMPRESARIALES&lt;/span&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ffffff;&quot;&gt;Ingrese sus datos para conexión&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="inputFrame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="ledClave">
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="ledUsuario"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ffffff;&quot;&gt;Contraseña:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="buddy">
+         <cstring>ledClave</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ffffff;&quot;&gt;Usuario:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="buddy">
+         <cstring>ledUsuario</cstring>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QPushButton" name="btnConfigurar">
+       <property name="text">
+        <string>Configurar conexión</string>
+       </property>
+       <property name="icon">
+        <iconset resource="app.qrc">
+         <normaloff>:/pics/configure.png</normaloff>:/pics/configure.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnConectar">
+       <property name="text">
+        <string>Conectar</string>
+       </property>
+       <property name="icon">
+        <iconset resource="app.qrc">
+         <normaloff>:/pics/conexion.png</normaloff>:/pics/conexion.png</iconset>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Salir</string>
+       </property>
+       <property name="icon">
+        <iconset resource="app.qrc">
+         <normaloff>:/pics/application-exit.png</normaloff>:/pics/application-exit.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>ledUsuario</tabstop>
+  <tabstop>ledClave</tabstop>
+  <tabstop>btnConfigurar</tabstop>
+  <tabstop>btnConectar</tabstop>
+  <tabstop>pushButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="app.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btnConectar</sender>
+   <signal>clicked()</signal>
+   <receiver>FConexion</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>269</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>204</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

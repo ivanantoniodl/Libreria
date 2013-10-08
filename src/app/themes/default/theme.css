@@ -1,0 +1,89 @@
+QMainWindow::separator {
+  border: none;
+  padding: 0px;
+  border-radius: 5px;
+  width: 0px;
+}
+
+#dockWidget::title {
+	background: rgb(42, 146, 210);
+	margin: 0px;
+	border: 0px;
+}
+
+#dockWidget {
+	border: 0px;
+	padding: 0px;
+}
+
+#centralwidget, #statusbar, #menubar {
+	background-color: rgb(213, 209, 202);
+}
+
+/*menu principal*/
+
+#frmPanelPrincipal {
+	border: none;
+}
+
+
+TMenuButton {
+	text-align: left;
+	color: rgb(229, 226, 220);
+	border: none;
+	font: bold;
+	min-height: 25px;
+	padding-left: 15px;
+}
+  
+TMenuButton:hover {
+	text-align: center left;
+	color: black;
+	background-image: url(:/themes/default/pics/ButtonBackgroundHover.png);
+	padding-left: 15px;
+}
+
+TMenuButton:checked {
+	text-align: center left;
+	color: black;
+	background-image: url(:/themes/default/pics/ButtonBackground.png);
+	padding-left: 15px;
+}
+
+TMenuWidget QLabel {
+	font: bold;
+	color: white;
+}
+
+/* defaults menus*/
+TMenuWidget {
+	border: none;
+}
+
+/* Estilo de List View central #frmCentral */
+
+#FMenuModel QFrame {
+	background-image: url(:/themes/default/pics/fondo.png);
+	color: white;
+	border: none;
+	border-radius: 10px;
+}
+
+#frmeMenu QFrame {
+	background-image: url(:/themes/default/pics/fondo2.png);
+	color: white;
+	border-radius: 20px;
+}
+
+#FMenuModel QListView {
+	border: none;
+}
+
+#FMenuModel QTableView {
+	border: none;
+}
+ 
+QTableView, QTableWidget, QListView, QListWidget {
+	alternate-background-color: rgb(170, 170, 255);
+}
+

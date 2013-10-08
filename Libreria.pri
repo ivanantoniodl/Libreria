@@ -1,0 +1,4 @@
+DEFINES += QANTDEBUG
+DEFINES += CUSTOMER=\"\\\"Li\\\"\"
+
+APP_BUILD_TREE = $$PWD/build

@@ -1,0 +1,12 @@
+ #ifndef REPORTES_GLOBAL_H
+#define REPORTES_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(REPORTES_LIBRARY)
+#  define REPORTESSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define REPORTESSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // REPORTES_GLOBAL_H
