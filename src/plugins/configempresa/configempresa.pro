@@ -4,7 +4,7 @@ include(configempresa_dependencies.pri)
 TARGET = $$qtLibraryTarget(ConfigEmpresa)
 TEMPLATE = lib
 CONFIG += plugin
-
+DEFINES += CONFIGEMPRESA_LIBRARY
 
 QT += sql
 
