@@ -18,13 +18,19 @@ CONFIG += plugin
 
 DEFINES += LIBROS_LIBRARY
 
-SOURCES += libros.cpp 
+SOURCES += libros.cpp \ 
+    flibros.cpp \
+    fingreso.cpp
 
 HEADERS += libros.h \
-    libros_global.h
+    libros_global.h \
+    flibros.h \
+    fingreso.h
 
 
-FORMS += 
+FORMS += \ 
+    flibros.ui \
+    fingreso.ui
 
 
 

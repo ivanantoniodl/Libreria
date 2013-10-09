@@ -2,6 +2,7 @@
 #include "libros.h"
 
 
+
 libros::libros():
     PrincipalFormPlugin(PrincipalFormPlugin::TypeWidget)
 {
@@ -28,7 +29,7 @@ QStringList libros::dependencies()
 
 QWidget *libros::widget()
 {
-    return new Principallibros();
+    return new flibros();
 }
 
 
