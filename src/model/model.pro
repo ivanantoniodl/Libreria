@@ -28,6 +28,8 @@ HEADERS += om/QueryBuilder/abstractplatform.h \
 		om/lugarrecordbase.h \
 		om/lugartipomodelbase.h \
 		om/lugartiporecordbase.h \
+		om/maquinamodelbase.h \
+		om/maquinarecordbase.h \
 		om/modelbase.h \
 		om/permisomodelbase.h \
 		om/permisorecordbase.h \
@@ -66,6 +68,8 @@ HEADERS += om/QueryBuilder/abstractplatform.h \
 		lugarrecord.h \
 		lugartipomodel.h \
 		lugartiporecord.h \
+		maquinamodel.h \
+		maquinarecord.h \
 		permisomodel.h \
 		permisorecord.h \
 		qantmv_global.h \
@@ -99,6 +103,8 @@ SOURCES += om/QueryBuilder/abstractplatform.cpp \
 		om/lugarrecordbase.cpp \
 		om/lugartipomodelbase.cpp \
 		om/lugartiporecordbase.cpp \
+		om/maquinamodelbase.cpp \
+		om/maquinarecordbase.cpp \
 		om/modelbase.cpp \
 		om/permisomodelbase.cpp \
 		om/permisorecordbase.cpp \
@@ -137,6 +143,8 @@ SOURCES += om/QueryBuilder/abstractplatform.cpp \
 		lugarrecord.cpp \
 		lugartipomodel.cpp \
 		lugartiporecord.cpp \
+		maquinamodel.cpp \
+		maquinarecord.cpp \
 		permisomodel.cpp \
 		permisorecord.cpp \
 		rolmodel.cpp \

@@ -364,3 +364,31 @@ LibroAutor:
     fk_Libro_has_Autor_Libro1_idx:
       fields: [Libro_id]
 
+Maquina:
+  columns:
+    idMaquina:
+      type: integer
+      primary: true
+      notnull: true
+      autoincrement: true
+      position: 1
+    Ip:
+      type: string(15)
+      unique: true
+      default: null
+      position: 2
+    Lugar_idLugar:
+      type: tinyint
+      unsigned: true
+      notnull: true
+      position: 3
+  relations:
+    LugarIdLugar:
+      class: Lugar
+      local: Lugar_idLugar
+      foreign: idLugar
+      foreignAlias: Maquina
+  indexes:
+    fk_Maquina_Lugar1_idx:
+      fields: [Lugar_idLugar]
+

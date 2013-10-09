@@ -18,10 +18,12 @@
   Para mayor información ver Record.
 */
 
+class MaquinaRecordBase;
 
 
 class QANTMVSHARED_EXPORT LugarRecordBase :  public RecordSimpleBase
 {
+friend class MaquinaRecordBase;
 
 	Q_OBJECT
 	/*!Esta propiedad representa el atributo de la llave primaria.

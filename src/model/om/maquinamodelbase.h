@@ -4,6 +4,7 @@
 #include "modelbase.h"
 #include "recordconfigurequerybase.h"
 #include "maquinarecordbase.h"
+
 #include "lugarmodelbase.h"
 
 

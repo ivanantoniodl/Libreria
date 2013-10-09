@@ -283,6 +283,26 @@ CREATE  TABLE IF NOT EXISTS `LibroAutor` (
 ENGINE = InnoDB;
 
 
+-- -----------------------------------------------------
+-- Table `Maquina`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `Maquina` ;
+
+CREATE  TABLE IF NOT EXISTS `Maquina` (
+  `idMaquina` INT(11) NOT NULL AUTO_INCREMENT ,
+  `Ip` VARCHAR(15) NULL DEFAULT NULL ,
+  `Lugar_idLugar` TINYINT UNSIGNED NOT NULL ,
+  PRIMARY KEY (`idMaquina`) ,
+  UNIQUE INDEX `Ip_UNIQUE` (`Ip` ASC) ,
+  INDEX `fk_Maquina_Lugar1_idx` (`Lugar_idLugar` ASC) ,
+  CONSTRAINT `fk_Maquina_Lugar1`
+    FOREIGN KEY (`Lugar_idLugar` )
+    REFERENCES `Lugar` (`idLugar` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
