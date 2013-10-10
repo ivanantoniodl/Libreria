@@ -89,7 +89,7 @@ void AutorRecordBase::init()
 << "Direccion";
 	AUTORPKATTRIBUTESLIST << "id";
 	AUTORDATETIMEATTRIBUTESLIST  = QStringList();;
-	AUTORPKAUTOINCREMENTATTRIBUTE = "";
+	AUTORPKAUTOINCREMENTATTRIBUTE = "id";
 }
 
 //! Inicializa los atributos con tipos primitivos

@@ -323,6 +323,7 @@ Autor:
       type: integer
       primary: true
       notnull: true
+      autoincrement: true
       position: 1
     Nombre:
       type: string(45)
