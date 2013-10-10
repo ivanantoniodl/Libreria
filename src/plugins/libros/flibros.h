@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "libromodel.h"
 #include "fingreso.h"
+#include "QMessageBox"
 
 namespace Ui {
 class flibros;
@@ -20,9 +21,12 @@ public:
 private slots:
     void on_btnNuevo_clicked();
 
+    void on_tvwLibros_clicked(const QModelIndex &index);
+
 private:
     Ui::flibros *ui;
     LibroModel *libros;
+    int id;
     void cargarLibros();
 };
 

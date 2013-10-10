@@ -11,6 +11,7 @@ flibros::flibros(QWidget *parent) :
     ui->tvwLibros->setModel(libros);
     ui->tvwLibros->resizeColumnsToContents();
     ui->tvwLibros->setColumnHidden(0,true);
+    id = 0;
 }
 
 flibros::~flibros()
@@ -34,4 +35,18 @@ void flibros::on_btnNuevo_clicked()
     v->exec();
 
     cargarLibros();
+}
+
+void flibros::on_tvwLibros_clicked(const QModelIndex &index)
+{
+    LibroRecord *LibroSeleccionado = (LibroRecord *)ui->tvwLibros->getSelectedRecords<LibroRecord *>().at(0);
+
+    id = LibroSeleccionado->id();
+
+    fIngreso *v =new fIngreso(id,this);
+    v->exec();
+
+    cargarLibros();
+
+
 }

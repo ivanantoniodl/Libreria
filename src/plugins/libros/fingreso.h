@@ -15,6 +15,7 @@ class fIngreso : public QDialog
     
 public:
     explicit fIngreso(QWidget *parent = 0);
+    explicit fIngreso(int idL,QWidget *parent = 0);
     ~fIngreso();
     
 private slots:
@@ -22,6 +23,7 @@ private slots:
 
 private:
     Ui::fIngreso *ui;
+    int id;
 };
 
 #endif // FINGRESO_H

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>679</width>
+    <height>382</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +15,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QTableView" name="tvwLibros"/>
+    <widget class="TTableViewModelRecord" name="tvwLibros"/>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -43,6 +43,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TTableViewModelRecord</class>
+   <extends>QTableView</extends>
+   <header location="global">ttableviewmodelrecord.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
